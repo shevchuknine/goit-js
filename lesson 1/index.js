@@ -93,10 +93,10 @@
 //
 // console.log(7 >= 8);
 
-// console.log(6 === 6)
-// console.log(5 === 6);
-// console.log(5 !== 6);
-// console.log(6 !== 6);
+console.log(6 === 6)
+console.log(5 === 6);
+console.log(5 !== 6);
+console.log(6 !== 6);
 
 // console.log(1 === "1");
 
@@ -105,11 +105,11 @@
 // number -= 100;
 // console.log(number);
 
-const ageOfUser = prompt("how old are you?");
-// const numericValue = Number(ageOfUser);
-const numericValue = Number.parseFloat(ageOfUser);
-console.log(numericValue, typeof numericValue);
-
+// const ageOfUser = prompt("how old are you?");
+// // const numericValue = Number(ageOfUser);
+// const numericValue = Number.parseFloat(ageOfUser);
+// console.log(numericValue, typeof numericValue);
+//
 
 
 
