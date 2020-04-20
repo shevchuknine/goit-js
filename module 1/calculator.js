@@ -19,17 +19,35 @@ do {
             if (isNaN(number)) {
                 alert("Вы ввели неверное число");
             } else {
-                let result;
+                const calculation = (operation, initialValue, number) => {
+                    if (operation === "+") {
+                        return initialValue + number;
+                    }
 
-                if (operation === "+") {
-                    result = initialValue + number;
-                } else if (operation === "-") {
-                    result = initialValue - number;
-                } else if (operation === "/") {
-                    result = initialValue / number;
-                } else if (operation === "*") {
-                    result = initialValue * number;
-                }
+                    if (operation === "-") {
+                        return initialValue - number;
+                    }
+
+                    if (operation === "/") {
+                        return initialValue / number;
+                    }
+
+                    if (operation === "*") {
+                        return initialValue * number;
+                    }
+                };
+
+                let result = calculation(operation, initialValue, number);
+
+                // if (operation === "+") {
+                //     result = initialValue + number;
+                // } else if (operation === "-") {
+                //     result = initialValue - number;
+                // } else if (operation === "/") {
+                //     result = initialValue / number;
+                // } else if (operation === "*") {
+                //     result = initialValue * number;
+                // }
 
                 // alert("Результат операции 0" + operation + number + " = " + result);
                 alert(`Результат операции ${initialValue} ${operation} ${number} = ${result}`);
