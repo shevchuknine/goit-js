@@ -53,55 +53,64 @@ function metersToKilometers(meters) {
 };
 
 // const points = [[77.1539, -139.398], [-77.1804, -139.55], [-4.29, -68.26], [77.1539, -139.398]];
-// let totalDistance = 0;
-// for (let i = 0; i < points.length - 1; i += 1) {
-//     const firstPoint = points[i];
-//     const secondPoint = points[i + 1];
-//
-//     console.log(`${i}, firstPoint: [${firstPoint}], secondPoint: [${secondPoint}]`);
-//
-//     const firstPointLat = firstPoint[0];
-//     const firstPointLong = firstPoint[1];
-//     const secondPointLat = secondPoint[0];
-//     const secondPointLong = secondPoint[1];
-//
-//     totalDistance += calculateDistanceBetween2Dots(
-//         firstPointLat, firstPointLong, secondPointLat, secondPointLong
-//     );
-// }
-//
-// console.log(`Total distance: ${totalDistance} meters, ${metersToKilometers(totalDistance)} kilometers`);
+const points = [{lat: 77.1539, lon: -139.398}, {lat: -77.1804, lon: -139.55}];
+let totalDistance = 0;
+for (let i = 0; i < points.length - 1; i += 1) {
+    const firstPoint = points[i];
+    const secondPoint = points[i + 1];
 
-const array = [
-[1, 2, 3, 4, 5],
-[6, 7, 8, 9, 10],
-// [1, 2, 3, 4, 5],
-// [6, 7, 8, 9, 10],
-// [1, 2, 3, 4, 5],
-// [6, 7, 8, 9, 10],
-// [1, 2, 3, 4, 5]
-]
+    console.log(`${i}, firstPoint: [${firstPoint}], secondPoint: [${secondPoint}]`);
 
-for (let i = 0; i < array.length; i += 1) {
-    const isEvenNumber = i % 2 === 0;
-    const innerArray = array[i];
+    // вариант с массивом
+    // const firstPointLat = firstPoint[0];
+    // const firstPointLong = firstPoint[1];
+    // const secondPointLat = secondPoint[0];
+    // const secondPointLong = secondPoint[1];
 
-    if (isEvenNumber) {
-        for (let j = 0; j < innerArray.length; j += 1) {
-            console.log(innerArray[j]);
-        }
-    } else {
-        for (let j = innerArray.length - 1; j >= 0; j -= 1) {
-            console.log(innerArray[j]);
-        }
-    }
+    // totalDistance += calculateDistanceBetween2Dots(
+    //     firstPointLat, firstPointLong, secondPointLat, secondPointLong
+    // );
 
-    // for (
-    //     let j = isEvenNumber ? 0 : innerArray.length - 1;
-    //     isEvenNumber ? j < innerArray.length : j >= 0;
-    //     isEvenNumber ? j += 1: j -= 1
-    //     ) {
-    //     console.log(innerArray[j]);
-    // }
+    // вариант с объектом
+    const {lat: lat1, lon: lon1} = firstPoint;
+    const {lat: lat2, lon: lon2} = secondPoint;
+    totalDistance += calculateDistanceBetween2Dots(
+        lat1, lon1, lat2, lon2
+    );
 }
+
+console.log(`Total distance: ${totalDistance} meters, ${metersToKilometers(totalDistance)} kilometers`);
+
+// const array = [
+// [1, 2, 3, 4, 5],
+// [6, 7, 8, 9, 10],
+// // [1, 2, 3, 4, 5],
+// // [6, 7, 8, 9, 10],
+// // [1, 2, 3, 4, 5],
+// // [6, 7, 8, 9, 10],
+// // [1, 2, 3, 4, 5]
+// ]
+//
+// for (let i = 0; i < array.length; i += 1) {
+//     const isEvenNumber = i % 2 === 0;
+//     const innerArray = array[i];
+//
+//     if (isEvenNumber) {
+//         for (let j = 0; j < innerArray.length; j += 1) {
+//             console.log(innerArray[j]);
+//         }
+//     } else {
+//         for (let j = innerArray.length - 1; j >= 0; j -= 1) {
+//             console.log(innerArray[j]);
+//         }
+//     }
+//
+//     // for (
+//     //     let j = isEvenNumber ? 0 : innerArray.length - 1;
+//     //     isEvenNumber ? j < innerArray.length : j >= 0;
+//     //     isEvenNumber ? j += 1: j -= 1
+//     //     ) {
+//     //     console.log(innerArray[j]);
+//     // }
+// }
 
