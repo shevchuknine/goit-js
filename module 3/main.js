@@ -100,7 +100,7 @@ for (const item of priceLessThen50) {
     const {id, price} = item;
     shop.updateItem(id, {price: price + 20});
 }
-console.log("__________");
+console.log("__________")
 shop.showItems();
 
 
