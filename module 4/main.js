@@ -147,11 +147,11 @@ function find(array, callback) {
     return null;
 }
 
-const array = [{a: 1}, {a: 2}, {a: 3}, {a: 4}];
+const array = [{a: 1}, {a: 2}, {a: 3}, {b: 1}];
 
 const byFieldName = function(fieldName, fieldValue) {
     return function innerCallback(elementOfArray) {
-        elementOfArray[fieldName]["test"];
+        // elementOfArray[fieldName]["test"];
         return elementOfArray[fieldName] === fieldValue;
     };
 };
