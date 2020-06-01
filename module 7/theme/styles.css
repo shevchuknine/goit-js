@@ -1,0 +1,28 @@
+html {
+    height: 100vh;
+}
+
+.body {
+    padding: 100px;
+}
+
+/*html.dark {*/
+    /*background-color: black;*/
+/*}*/
+
+/*html.dark .body {*/
+    /*color: white;*/
+/*}*/
+
+:root {
+    --background: white;
+    --text: black;
+}
+
+html {
+    background-color: var(--background);
+}
+
+.body {
+    color: var(--text);
+}
