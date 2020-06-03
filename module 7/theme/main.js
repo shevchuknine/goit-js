@@ -14,3 +14,6 @@ const toggleTheme = () => {
     }
 
 };
+
+document.querySelector(".body").addEventListener("click", () => console.log("1"))
+document.querySelector(".body").addEventListener("click", () => console.log("2"))
