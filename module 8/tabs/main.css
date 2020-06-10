@@ -1,0 +1,11 @@
+.tab.active {
+    color: blue;
+}
+
+.page {
+    display: none;
+}
+
+.page.active {
+    display: block;
+}

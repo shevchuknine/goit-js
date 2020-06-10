@@ -1,0 +1,15 @@
+html, body {
+    height: 100vh;
+    margin: 0;
+}
+
+body {
+    position: relative;
+}
+
+.element {
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+    position: absolute;
+}
