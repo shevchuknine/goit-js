@@ -1,0 +1,12 @@
+<form>
+  {{#each this}}
+    <span>{{label}}</span>
+    {{#if (isNumericField type)}}
+      {{> numberInput partialName=name}}
+    {{/if}}
+    {{#if (isStringField type)}}
+      {{> stringInput partialName=name}}
+    {{/if}}
+  {{/each}}
+  <button type="submit">Submit</button>
+</form>

@@ -1,0 +1,10 @@
+<div class="news">
+  {{#each news}}
+    <div class="news-inner">
+      <a href="/{{this.id}}">{{this.title}}</a>
+      <p>{{this.description}}</p>
+      <span>{{this.date}}</span>
+    </div>
+  {{/each}}
+</div>
+
