@@ -1,0 +1,16 @@
+{
+  "activeContact": "id of contact",
+  "contacts": [
+    {
+      "id": "asdfasdfa",
+      "name": "Contanct 1",
+      "messages": [
+        {
+          "id": "messageId-1",
+          "author": 0,
+          "text": "asdfasdfasdfasdfads"
+        }
+      ]
+    }
+  ]
+}
