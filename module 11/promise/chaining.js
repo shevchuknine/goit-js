@@ -7,27 +7,27 @@
 //         console.log(allowedCountries);
 //     });
 
-// createRequest(false, "string")
-//     .catch((error) => {
-//         console.log("произошла какая-то ошибка", error);
-//         return "default string";
-//     })
-//     .then((result) => {
-//         console.log(result);
-//         return result.split("").filter((item, index) => index % 2 !== 0);
-//
-//         // реализация под капотом
-//         // return new Promise((resolve) => {
-//         //     resolve(result.split("").filter((item, index) => index % 2 !== 0));
-//         // })
-//     })
-//     .then((splittedSymbols) => {
-//         console.log(splittedSymbols, asd);
-//     })
-//     .catch((errorMessage) => {
-//         console.log("произошла какая-то ошибка еще раз", errorMessage);
-//     });
-//
+createRequest(false, "string")
+    .catch((error) => {
+        console.log("произошла какая-то ошибка", error);
+        return "default string";
+    })
+    .then((result) => {
+        console.log(result);
+        return result.split("").filter((item, index) => index % 2 !== 0);
+
+        // реализация под капотом
+        // return new Promise((resolve) => {
+        //     resolve(result.split("").filter((item, index) => index % 2 !== 0));
+        // })
+    })
+    .then((splittedSymbols) => {
+        console.log(splittedSymbols, asd);
+    })
+    .catch((errorMessage) => {
+        console.log("произошла какая-то ошибка еще раз", errorMessage);
+    });
+
 // new Promise((resolve, reject) => {
 //     // resolve("data");
 //     reject("error");
@@ -52,6 +52,9 @@ Promise.race([
 }).catch(console.warn)
 
 
+
+const func = (a, b) => a + b;
+func(1, 2)
 
 
 
